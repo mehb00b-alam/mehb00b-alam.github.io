@@ -1,0 +1,83 @@
+/* All publication metadata is transcribed from the author's academic CV.
+   Update titles/statuses/links here if new papers are published. */
+const publications = [
+  {year:2025, authors:'A. Zada, U. Riaz, J. Jamshed, M. Alam & A. Kallekh', title:'Analysis of impulsive Caputo fractional integro-differential equations with delay', journal:'Mathematical Methods in the Applied Sciences, 48(2), 2102–2121', doi:'10.1002/mma.10426', first:false},
+  {year:2024, authors:'M. Alam, A. Zada & T. Abdeljawad', title:'Stability analysis of an implicit fractional integro-differential equation via integral boundary conditions', journal:'Alexandria Engineering Journal, 87, 501–514', doi:'10.1016/j.aej.2023.12.055', first:true},
+  {year:2023, authors:'M. Alam, S. Haq, I. Ali, M. J. Ebadi & S. Salahshour', title:'Radial Basis Functions Approximation Method for Time Fractional FitzHugh–Nagumo Equation', journal:'Fractal and Fractional, 7(12), 882', doi:'10.3390/fractalfract7120882', first:true},
+  {year:2023, authors:'F. Amin, H. A. Waqas, M. Alam, A. Yousafzai, K. Naeem, N. Khan, M. Gerges & M. Fawad', title:'Strengthening of Reinforced Concrete Deep Beams with Large Openings Using Metal Plates', journal:'Emirati Journal of Civil Engineering and Applications, 1(1), 31–44', doi:'10.54878/0ngk5130', first:false},
+  {year:2023, authors:'M. Alam, A. Zada, S. Begum & U. Riaz', title:'Analysis of Fractional Integro-differential System with Impulses', journal:'International Journal of Applied and Computational Mathematics, 9, 93', doi:'10.1007/s40819-023-01584-6', first:true},
+  {year:2023, authors:'R. Majeed, B. Zhang & M. Alam', title:'Fractional Langevin Coupled System with Stieltjes Integral Conditions', journal:'Mathematics, 11, 2278', doi:'10.3390/math11102278', first:false},
+  {year:2023, authors:'M. Alam & K. H. Khalid', title:'Analysis of q-fractional coupled implicit systems involving the nonlocal Riemann–Liouville and Erdélyi–Kober q-fractional integral conditions', journal:'Mathematical Methods in the Applied Sciences, 46(12), 12711–12734', doi:'10.1002/mma.9208', first:true},
+  {year:2023, authors:'M. Alam, A. Khan & M. Asif', title:'Analysis of implicit system of fractional order via generalized boundary conditions', journal:'Mathematical Methods in the Applied Sciences, 46(9), 10554–10571', doi:'10.1002/mma.9139', first:true},
+  {year:2023, authors:'L. Guo, U. Riaz, A. Zada & M. Alam', title:'On Implicit Coupled Hadamard Fractional Differential Equations with Generalized Hadamard Fractional Integro-Differential Boundary Conditions', journal:'Fractal and Fractional, 7(1), 13', doi:'10.3390/fractalfract7010013', first:false},
+  {year:2022, authors:'B. Zhang, R. Majeed & M. Alam', title:'On Fractional Langevin Equations with Stieltjes Integral Conditions', journal:'Mathematics, 10, 3877', doi:'10.3390/math10203877', first:false},
+  {year:2022, authors:'A. Zada, M. Alam, K. H. Khalid, R. Iqbal & I. L. Popa', title:'Analysis of Q-Fractional Implicit Differential Equation with Nonlocal Riemann–Liouville and Erdélyi–Kober Q-Fractional Integral Conditions', journal:'Qualitative Theory of Dynamical Systems, 21(93), 1–39', doi:'10.1007/s12346-022-00623-9', first:false},
+  {year:2022, authors:'M. Alam & A. Zada', title:'Implementation of q-calculus on q-integro-differential equation involving anti-periodic boundary conditions with three criteria', journal:'Chaos, Solitons & Fractals, 154, 111625', doi:'10.1016/j.chaos.2021.111625', first:true},
+  {year:2021, authors:'M. Alam, A. Zada & U. Riaz', title:'On a coupled impulsive fractional integrodifferential system with Hadamard derivatives', journal:'Qualitative Theory of Dynamical Systems, 21(8), 1–31', doi:'10.1007/s12346-021-00535-0', first:true},
+  {year:2021, authors:'M. Alam, A. Zada, I. L. Popa, A. Kheiryan, S. Rezapour & M. K. A. Kaabar', title:'A Fractional Differential Equation with Multi-Point Strip Boundary Condition involving the Caputo Fractional Derivative and its Hyers–Ulam Stability', journal:'Boundary Value Problems, 2021, 73', doi:'10.1186/s13661-021-01549-y', first:true},
+  {year:2021, authors:'M. Alam & D. Shah', title:'Hyers–Ulam stability of coupled implicit fractional integro-differential equations with Riemann–Liouville derivatives', journal:'Chaos, Solitons & Fractals, 150, 111122', doi:'10.1016/j.chaos.2021.111122', first:true},
+  {year:2021, authors:'D. Luo, M. Alam, A. Zada, U. Riaz & Z. Luo', title:'Existence and stability of implicit fractional differential equations with Stieltjes boundary conditions having Hadamard derivatives', journal:'Complexity, 2021(3), 1–36', doi:'10.1155/2021/8824935', first:false},
+  {year:2020, authors:'X. Wang, M. Alam & A. Zada', title:'On coupled impulsive fractional integro-differential equations with Riemann–Liouville derivatives', journal:'AIMS Mathematics, 6(2), 1561–1595', doi:'10.3934/math.2021094', first:false},
+  {year:2021, authors:'A. Zada, M. Alam & U. Riaz', title:'Analysis of q-fractional implicit boundary value problems having Stieltjes integral conditions', journal:'Mathematical Methods in the Applied Sciences, 44(6), 4381–4413', doi:'10.1002/mma.7038', first:false},
+];
+
+publications.sort((a,b)=>b.year-a.year);
+
+const root = document.documentElement;
+const themeButton = document.getElementById('theme-toggle');
+function setTheme(dark){
+  root.dataset.theme = dark ? 'dark' : 'light';
+  themeButton.setAttribute('aria-label',dark ? 'Switch to light theme' : 'Switch to dark theme');
+  try { localStorage.setItem('mehboob-theme',dark?'dark':'light'); } catch(_err){}
+}
+let theme = 'light';
+try { theme = localStorage.getItem('mehboob-theme') || 'light'; } catch(_err) {}
+setTheme(theme==='dark');
+themeButton.addEventListener('click',()=>setTheme(root.dataset.theme!=='dark'));
+
+const menuToggle=document.querySelector('.menu-toggle');
+const mobileNav=document.getElementById('mobile-nav');
+function closeMenu(){mobileNav.hidden=true;menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label','Open menu');document.body.classList.remove('nav-open');}
+menuToggle.addEventListener('click',()=>{const open=mobileNav.hidden;mobileNav.hidden=!open;menuToggle.setAttribute('aria-expanded',String(open));menuToggle.setAttribute('aria-label',open?'Close menu':'Open menu');document.body.classList.toggle('nav-open',open);});
+mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+window.addEventListener('resize',()=>{if(window.innerWidth>820)closeMenu();});
+
+const list=document.getElementById('publication-list');
+const search=document.getElementById('pub-search');
+const showMore=document.getElementById('show-more-pubs');
+const count=document.getElementById('pub-count');
+const empty=document.getElementById('pub-empty');
+const buttons=[...document.querySelectorAll('.pub-filter')];
+let currentFilter='all';
+let expanded=false;
+function escapeHTML(str){return String(str).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function renderPublications(){
+  const q=search.value.trim().toLowerCase();
+  const matching=publications.filter(p => (currentFilter==='all'||(currentFilter==='first'&&p.first)||(currentFilter==='recent'&&p.year>=2023)) && (!q || `${p.title} ${p.authors} ${p.journal} ${p.year}`.toLowerCase().includes(q)));
+  const visible = expanded || q ? matching : matching.slice(0,6);
+  list.innerHTML=visible.map(p=>`<article class="publication-row"><div class="publication-year">${p.year}</div><div><div class="publication-title">${escapeHTML(p.title)}</div><p class="publication-authors">${escapeHTML(p.authors)}</p><div class="publication-journal">${escapeHTML(p.journal)}</div></div><a class="publication-link" href="https://doi.org/${encodeURIComponent(p.doi)}" target="_blank" rel="noopener noreferrer" aria-label="Read published article: ${escapeHTML(p.title)}" title="Read article (DOI)">↗</a></article>`).join('');
+  empty.hidden=matching.length!==0;
+  count.textContent=`Showing ${visible.length} of ${matching.length} matching publications`;
+  showMore.hidden=q!==''||matching.length<=6;
+  if(!showMore.hidden)showMore.innerHTML=expanded?'Show fewer publications <span aria-hidden="true">↑</span>':'Show all '+matching.length+' publications <span aria-hidden="true">↓</span>';
+}
+buttons.forEach(button=>button.addEventListener('click',()=>{currentFilter=button.dataset.filter;expanded=false;buttons.forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});renderPublications();}));
+search.addEventListener('input',renderPublications);
+showMore.addEventListener('click',()=>{expanded=!expanded;renderPublications();});
+renderPublications();
+
+const toast=document.getElementById('toast');
+let toastTimer;
+function notify(message){clearTimeout(toastTimer);toast.textContent=message;toast.classList.add('visible');toastTimer=setTimeout(()=>toast.classList.remove('visible'),2800);}
+document.getElementById('copy-email').addEventListener('click',async()=>{
+  const value='mehboob@nmsu.edu';
+  try{await navigator.clipboard.writeText(value);notify('Email address copied.');}
+  catch(_err){notify('Email: '+value);}
+});
+document.getElementById('current-year').textContent=String(new Date().getFullYear());
+
+const reveals=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver((entries,observer)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}});},{threshold:.09,rootMargin:'0px 0px -20px 0px'});
+  reveals.forEach(el=>io.observe(el));
+}else reveals.forEach(el=>el.classList.add('visible'));
