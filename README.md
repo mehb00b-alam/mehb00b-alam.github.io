@@ -15,10 +15,10 @@ Double-click `index.html` in your browser (or run `python -m http.server 8000` i
 
 ## Publish for free with GitHub Pages
 
-1. Create a repository at github.com named `MehboobAlam92.github.io` (or any name, such as `personal-website`).
+1. Create a repository at github.com named `mehb00b-alam.github.io` (or any name, such as `personal-website`).
 2. Upload the **contents** of this folder to the root of the repository.
 3. In **Settings → Pages**, under **Build and deployment**, select **Deploy from a branch**, `main`, `/(root)`, and Save.
-4. Your site will be available at `https://MehboobAlam92.github.io/` for the profile-named repository, or at `https://MehboobAlam92.github.io/personal-website/` for the example repository. Deployment may take a few minutes.
+4. Your site will be available at `https://mehb00b-alam.github.io/` for the profile-named repository, or at `https://mehb00b-alam.github.io/personal-website/` for the example repository. Deployment may take a few minutes.
 
 Netlify Drop is another simple option: drag the website folder onto Netlify's deploy page.
 
@@ -35,3 +35,7 @@ Netlify Drop is another simple option: drag the website folder onto Netlify's de
 The bundled PDF documents were copied from your existing CV and résumé, with the phone number redacted for public sharing. The website displays your professional email and social links, but not your phone number. Check publication details, date ranges, GPA, and submitted-manuscript status for any updates since your documents were last edited.
 
 This is a static site: the Email button opens the visitor's email app; it does not run a backend contact form or collect visitor information.
+
+## Profile photograph (October 2026)
+
+The portrait on the homepage is stored in `assets/mehboob-alam-portrait.webp`. Replace that image with a similar square photo to update it. The HTML and CSS control its size and crop.
