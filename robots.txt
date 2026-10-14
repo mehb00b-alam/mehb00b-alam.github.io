@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mehb00b-alam.github.io/sitemap.xml

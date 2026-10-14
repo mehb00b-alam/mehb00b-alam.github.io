@@ -1,41 +1,33 @@
-# Mehboob Alam — Personal Portfolio Website
+# Mehboob Alam — multi-page personal website
 
-A responsive, static personal website built with plain HTML, CSS, and JavaScript. It includes:
+This is a static, responsive portfolio for https://mehb00b-alam.github.io/.
+No framework, npm install, build step, or server-side software is needed.
 
-- About Me, Education, Teaching and Professional Experience
-- Machine Learning / Optimization / Scientific Computing Projects
-- Research Interests, Thesis Projects, All 18 Listed Journal Publications with DOI links
-- Technical Skills, Awards, Scholarships, Service, Conferences, Contact Links
-- Downloadable academic CV and industry résumé PDFs
-- Responsive layout, dark/light theme switch, mobile menu, publication search and filters
+## Site architecture
+- `index.html`: homepage overview
+- `about.html`, `projects.html`, `research.html`, `publications.html`, `experience.html`: major pages
+- `education.html`, `skills.html`, `community.html`, `contact.html`: additional pages
+- `projects/*.html`: individual detailed project pages
+- `research/*.html`: two thesis overview pages
+- `publications/*.html`: bibliographic publication records for all 18 articles
+- `styles.css`: shared design and responsive layout
+- `script.js`: dark mode, mobile navigation, filterable publications, copy email
+- `assets/`: professional portrait, favicon
+- `docs/`: academic CV and industry résumé; contact phone removed for public sharing
 
-## Preview
+## Publishing and updating on GitHub Pages
+The repository must be named `mehb00b-alam.github.io` and be public.
+Upload the **contents** of this folder to the `main` branch root (the `index.html` should be alongside `styles.css`).
+Go to Settings > Pages > Deploy from a branch > `main` > `/(root)`.
+**Important:** Delete old files only when you want to remove them; replacing existing names should update them.
 
-Double-click `index.html` in your browser (or run `python -m http.server 8000` in this folder and open `http://localhost:8000`). The website works offline without a build step or external dependencies.
+To update an individual project, edit its file inside `projects/`.
+To add a publication, add a record to the `publications` array in `script.js`, create a matching detail page, and link it from the list.
+DOI and publication data originally came from the author's CV and earlier website; verify links after publishing.
 
-## Publish for free with GitHub Pages
-
-1. Create a repository at github.com named `mehb00b-alam.github.io` (or any name, such as `personal-website`).
-2. Upload the **contents** of this folder to the root of the repository.
-3. In **Settings → Pages**, under **Build and deployment**, select **Deploy from a branch**, `main`, `/(root)`, and Save.
-4. Your site will be available at `https://mehb00b-alam.github.io/` for the profile-named repository, or at `https://mehb00b-alam.github.io/personal-website/` for the example repository. Deployment may take a few minutes.
-
-Netlify Drop is another simple option: drag the website folder onto Netlify's deploy page.
-
-## Editing
-
-- Update biography, project and experience copy in `index.html`.
-- Update or add publications in the `publications` array at the top of `script.js` (all entries have `title`, `authors`, `journal`, `year`, `doi`, `first`).
-- Change theme, color palette, layout, or spacing in `styles.css`.
-- Replace `docs/Mehboob_Alam_Academic_CV.pdf` and `docs/Mehboob_Alam_Industry_Resume.pdf` as your CV evolves.
-- Replace LinkedIn/GitHub/Scholar/ResearchGate links if they change.
-
-## Review before publishing
-
-The bundled PDF documents were copied from your existing CV and résumé, with the phone number redacted for public sharing. The website displays your professional email and social links, but not your phone number. Check publication details, date ranges, GPA, and submitted-manuscript status for any updates since your documents were last edited.
-
-This is a static site: the Email button opens the visitor's email app; it does not run a backend contact form or collect visitor information.
-
-## Profile photograph (October 2026)
-
-The portrait on the homepage is stored in `assets/mehboob-alam-portrait.webp`. Replace that image with a similar square photo to update it. The HTML and CSS control its size and crop.
+## Limitations / review items
+- Some ML project pages summarize coursework; actual result figures and code repository links can be added later.
+- Classification is marked in progress based on the supplied source résumé; update as needed.
+- Publication records provide citations and DOI links, not full copyrighted journal articles.
+- The email link opens visitors’ mail apps; the website does not host a contact-form backend.
+- Review dates, GPAs, publication status, and URLs before treating the portfolio as finalized.
