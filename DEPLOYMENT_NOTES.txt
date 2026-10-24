@@ -1,9 +1,13 @@
-MATCHED APPROVED DESIGN — GitHub Pages deployment
+APPROVED WEBSITE / OCTOBER 24, 2026
 
-This package replaces the prior approximation. Visualizations are cropped from your explicitly approved concept images so the card pictures match. The illustrations are representative, not original scientific results or verified campus photos.
+Upload the CONTENTS of this directory to the repository root on GitHub, not the ZIP.
+Repository: https://github.com/mehb00b-alam/mehb00b-alam.github.io
+GitHub Pages: main branch, /(root).
 
-To publish: unzip and upload the CONTENTS at the repository root, then commit. Do not upload the ZIP itself. index.html must be at repository root.
+Changes: retains approved homepage, strict About design, Projects and Research cards,
+Experience timeline, 18 publications and project detail pages; improves teal textures,
+image visibility, dark-mode active navigation, experience centering, and removal
+of presentation-only corner labels. Illustrated images are conceptual artwork, not
+verified photographs or scientific experiment results.
 
-This is not yet deployed to your live repository.
-
-READABILITY UPDATE: readability.css added and loaded after the other styles on all HTML pages. Larger type on project cards, publications, timeline, navigations, footer. Deploy all files and directories.
+Test after uploading: light/dark menus; project filters; all role and project detail links.

@@ -1,0 +1,138 @@
+/* Approved-reference fidelity update • 24 October 2026. All earlier site styles remain intact. */
+/* High-contrast active page markers in both light and dark themes. */
+.desktop-nav a {position:relative;transition:color .18s ease, background-color .18s ease;}
+.desktop-nav a[aria-current="page"] {color:#007f77!important;border-bottom:3px solid #08a899!important;box-shadow:inset 0 -1px #08a899;font-weight:850!important;}
+html[data-theme="dark"] .desktop-nav a[aria-current="page"] {color:#92fbe9!important;border-color:#5cf0d2!important;box-shadow:inset 0 -2px #5cf0d2;text-shadow:0 0 13px rgba(73,231,197,.25)!important;}
+html[data-theme="dark"] .mobile-nav a[aria-current="page"] {color:#8ef6e0!important;background:rgba(66,223,185,.14);border-left:3px solid #69edcf;font-weight:850;}
+/* Match the delicate tonal variations of the approved teal headers; keep contrast high. */
+.refresh-hero h1 em,.refresh-page-head h1 em,.exp-hero h1 span,.about-strict-page .ab-hero h1 em,.refresh-dot,.ab-name-dot {
+  color:#079888;
+  background-image:url('assets/teal-grain.png'),linear-gradient(135deg,#006e72 2%,#0ba996 33%,#087d7d 58%,#21c4a6 95%);
+  background-blend-mode:soft-light,normal;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+html[data-theme="dark"] .refresh-hero h1 em, html[data-theme="dark"] .refresh-page-head h1 em,
+html[data-theme="dark"] .exp-hero h1 span,html[data-theme="dark"].about-strict-page .ab-hero h1 em {
+ background-image:url('assets/teal-grain.png'),linear-gradient(135deg,#62dbca,#43bda8 42%,#8bf1d6);
+}
+/* Fine dotted and sweeping shapes, never opaque over text or portraits. */
+.refresh-hero,.refresh-page-head,.refresh-research-head,.exp-hero,.about-strict-page .about-exact-root{position:relative;isolation:isolate;}
+.refresh-hero:before,.refresh-page-head:before,.exp-hero:before,.about-strict-page .about-exact-root:after{
+ content:"";position:absolute;pointer-events:none;inset:auto 4% 18% auto;width:170px;height:190px;
+ background-image:radial-gradient(circle,rgba(4,140,138,.19) 1.25px,transparent 1.9px);background-size:22px 22px;opacity:.5;z-index:-1;
+}
+.refresh-page-head:before{inset:6% 2% auto auto;width:270px;height:140px;opacity:.3}
+.exp-hero:before{inset:6% 6% auto auto;width:280px;height:110px;opacity:.25}
+.about-strict-page .about-exact-root:after{inset:12% 19% auto auto;width:170px;height:155px;opacity:.14}
+/* Full thumbnails: prevent the original CSS from zooming artwork off the sides. */
+.refresh-chart {background:linear-gradient(135deg,#e7f7fc,#f9fdff 56%,#e9faf6);border:1px solid #edf4f7;isolation:isolate;}
+.refresh-chart img,.refresh-project-card .refresh-chart img,.refresh-research-card .refresh-chart img {
+ display:block;width:100%;height:100%;object-fit:contain!important;object-position:center!important;
+ border-radius:8px;transform:none!important;
+}
+/* The small text is baked into approved concept-image crops, so visually neutralize only its corner. */
+.refresh-chart:after {content:"";position:absolute;top:0;right:0;z-index:2;width:91px;height:22px;
+ background:linear-gradient(100deg,rgba(247,251,254,.92),rgba(246,252,254,.99));
+ border-radius:0 10px 0 12px;pointer-events:none;
+}
+.refresh-illustrative,.exp-photo-label {display:none!important}
+/* Make portrait and frame read like the approved screenshot, with the badge OUTSIDE the face. */
+.refresh-hero-photo-frame {overflow:visible;}
+.refresh-hero-photo-frame img {object-fit:contain!important;background:#b8ccdc;}
+.about-strict-page .ab-portrait-frame img {object-fit:cover;object-position:center center}
+.about-strict-page .ab-degree-label {z-index:4;right:-116px!important;bottom:58px!important;max-width:none;}
+/* Keep the green framing visible, not a solid overlaid block. */
+.about-strict-page .ab-portrait-decor {background:linear-gradient(120deg,rgba(187,241,232,.82),rgba(218,249,244,.56));}
+/* Experience: CENTER the two-column timeline and center content vertically within each card. */
+@media(min-width:1221px){
+ .exp-body.exp-wide {width:min(1510px,calc(100% - 98px))!important;margin-inline:auto!important;
+   grid-template-columns:minmax(0,2.55fr) minmax(330px,.94fr)!important;gap:25px!important;}
+ .exp-timeline{grid-template-columns:145px 26px minmax(0,1fr)!important;gap:16px 11px!important;}
+ .exp-timeline:before {left:165px!important;}
+ .exp-role {grid-template-columns:175px minmax(0,1fr) 36px!important;min-height:173px;}
+ .exp-photo{height:146px!important;}
+}
+.exp-body {margin-inline:auto;}
+.exp-role{align-items:center!important;}
+.exp-role>div:not(.exp-photo){align-self:center;}
+.exp-role .exp-arrow{align-self:center;}
+.exp-photo{display:grid;place-items:center;overflow:hidden;isolation:isolate;background:#eaf5fa;}
+.exp-photo img{width:100%;height:100%;object-fit:contain!important;object-position:center!important;background:#eaf5fa;}
+/* Remove abbreviations embedded in concept campus artwork without clipping the building. */
+.exp-photo:after{content:"";position:absolute;right:0;top:0;width:58px;height:32px;
+ backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);
+ background:linear-gradient(95deg,rgba(229,243,251,.28),rgba(213,234,252,.42));
+ border-radius:0 10px 0 10px;pointer-events:none;}
+.exp-detail-visual .exp-photo:after{width:108px;height:55px;}
+.exp-hero .exp-wide{margin-inline:auto!important;}
+.exp-role h2{font-size:19px;line-height:1.3;}
+.exp-role .exp-desc,.exp-role .exp-loc{line-height:1.54;}
+/* Light/dark cards: maintain legible contrasts and visible arrow affordances. */
+html[data-theme="dark"] .exp-role,html[data-theme="dark"] .refresh-project-card,html[data-theme="dark"] .refresh-research-card {
+ border-color:#35516a;box-shadow:0 8px 25px rgba(0,0,0,.16)}
+html[data-theme="dark"] .exp-photo,html[data-theme="dark"] .refresh-chart{background:linear-gradient(135deg,#dceef7,#f6fbfe);}
+html[data-theme="dark"] .exp-photo img {background:#dfedf6;}
+html[data-theme="dark"] .refresh-chart:after{background:linear-gradient(105deg,rgba(247,252,255,.93),rgba(246,252,255,1))}
+/* Clear link affordances and readable cards at common desktop widths. */
+.refresh-project-card:focus-visible,.exp-role:focus-visible,.refresh-research-card:focus-visible{outline:3px solid #1acdb8;outline-offset:3px}
+@media(max-width:1220px){
+ .exp-body.exp-wide{width:min(1140px,calc(100% - 48px));margin-inline:auto!important;}
+ .exp-role{align-items:center!important;}
+ .about-strict-page .ab-degree-label{right:-35px!important;bottom:32px!important;}
+}
+@media(max-width:760px){
+ .refresh-hero:before,.refresh-page-head:before,.exp-hero:before,.about-strict-page .about-exact-root:after{opacity:.16}
+ .exp-body.exp-wide{width:calc(100% - 30px)}
+ .exp-role {align-items:start!important}
+ .exp-photo {min-height:112px}
+ .about-strict-page .ab-degree-label{right:-12px!important;bottom:8px!important;}
+ .refresh-chart:after{width:77px;height:18px;}
+}
+@media(prefers-reduced-motion:reduce){.refresh-project-card,.exp-role,.desktop-nav a{transition:none!important;}}
+/* Final alignment at medium desktop sizes and corner-label concealers. */
+@media(min-width:761px) and (max-width:1650px){
+ .about-strict-page .ab-socials{gap:12px!important;}
+ .about-strict-page .ab-socials a{gap:7px!important;font-size:16px!important;}
+ .about-strict-page .ab-social-icon{width:40px;height:40px;flex-basis:40px;}
+}
+.about-strict-page .ab-portrait-decor{opacity:.68;}
+.refresh-project-card .refresh-chart::after{
+ top:10px!important;right:0!important;width:111px!important;height:30px!important;
+ background:linear-gradient(110deg,#f4fafd,#f8fcfe 75%)!important;
+ border-radius:0 10px 0 13px!important;
+}
+.refresh-research-card .refresh-chart::after{
+ top:2px!important;right:0!important;width:112px!important;height:29px!important;
+ background:linear-gradient(110deg,#f2faff,#f8fcfe 72%)!important;
+}
+.refresh-current .refresh-chart::after{top:3px!important;height:25px!important;width:106px!important;}
+.exp-photo::after{
+ top:7px!important;right:0!important;width:78px!important;height:43px!important;
+ background:linear-gradient(110deg,rgba(160,198,235,.97),rgba(185,214,244,.98))!important;
+ backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+ border-radius:0 8px 0 14px;}
+.exp-detail-visual .exp-photo::after{top:12px!important;width:115px!important;height:64px!important;}
+/* Blend away embedded abbreviation bubbles using a continuous sky fade, not a rectangular patch. */
+.exp-photo::after{
+ inset:0 0 auto 0!important;width:100%!important;height:58px!important;
+ border-radius:10px 10px 0 0!important;
+ background:linear-gradient(180deg,rgba(131,184,236,.96) 0%,rgba(153,199,239,.96) 37%,rgba(177,215,247,.65) 60%,rgba(194,225,248,0) 100%)!important;
+ backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+}
+.exp-detail-visual .exp-photo::after{height:75px!important}
+/* Different vertical image padding in the course-project thumbnail strip. */
+.refresh-project-section:nth-of-type(3) .refresh-project-card .refresh-chart::after{
+ top:35px!important;right:0!important;width:115px!important;height:32px!important;
+ background:linear-gradient(100deg,#f4fafd,#f7fcff)!important;
+}
+.refresh-current .refresh-chart::after{top:45px!important;height:32px!important;width:115px!important;}
+/* A soft-edged sky-colored veil conceals the tiny abbreviation labels within source card art. */
+.exp-photo::after{
+ top:4px!important;left:auto!important;right:-3px!important;
+ width:100px!important;height:64px!important;
+ background:radial-gradient(ellipse at 77% 34%,#a9cef1 0%,#a4c9ee 55%,rgba(160,201,236,.82) 70%,transparent 95%)!important;
+ -webkit-mask-image:radial-gradient(ellipse at 72% 36%,black 0%,black 52%,transparent 95%);
+ mask-image:radial-gradient(ellipse at 72% 36%,black 0%,black 52%,transparent 95%);
+ border:0!important;
+}
+.exp-detail-visual .exp-photo::after{width:175px!important;height:90px!important;}
