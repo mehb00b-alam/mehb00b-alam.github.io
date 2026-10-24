@@ -12,7 +12,7 @@ No framework, npm install, build step, or server-side software is needed.
 - `publications/*.html`: bibliographic publication records for all 18 articles
 - `styles.css`: shared design and responsive layout
 - `script.js`: dark mode, mobile navigation, filterable publications, copy email
-- `assets/`: professional portrait, favicon
+- `assets/`: portrait, exact cropped graphics from your approved concept screenshots, experience illustrations, favicon
 - `docs/`: academic CV and industry résumé; contact phone removed for public sharing
 
 ## Publishing and updating on GitHub Pages
@@ -27,7 +27,10 @@ DOI and publication data originally came from the author's CV and earlier websit
 
 ## Limitations / review items
 - Some ML project pages summarize coursework; actual result figures and code repository links can be added later.
-- Classification is marked in progress based on the supplied source résumé; update as needed.
+- Supervised classification is marked completed; the separate Perceptron and Gradient Descent Methods project is marked in progress.
 - Publication records provide citations and DOI links, not full copyrighted journal articles.
 - The email link opens visitors’ mail apps; the website does not host a contact-form backend.
 - Review dates, GPAs, publication status, and URLs before treating the portfolio as finalized.
+
+### Visual assets
+The illustrated research, project, and campus visuals are design illustrations extracted from the user-approved mockup images. They are not evidence of numerical experimental output or documentary photos of actual buildings.

@@ -1,1 +1,8 @@
-document.querySelectorAll('.refresh-filter button').forEach(b=>b.addEventListener('click',()=>{const group=b.dataset.group;document.querySelectorAll('.refresh-filter button').forEach(x=>{const active=x===b;x.classList.toggle('selected',active);x.setAttribute('aria-pressed',String(active))});document.querySelectorAll('.refresh-project-section').forEach(s=>{s.hidden=group!=='all'&&s.dataset.projectGroup!==group})}));
+function bindProjectFilters(){
+ document.querySelectorAll('.refresh-filter button').forEach(b=>b.addEventListener('click',()=>{
+  const group=b.dataset.group;
+  document.querySelectorAll('.refresh-filter button').forEach(x=>{const active=x===b;x.classList.toggle('selected',active);x.setAttribute('aria-pressed',String(active))});
+  document.querySelectorAll('.refresh-project-section').forEach(s=>{s.hidden=group!=='all'&&s.dataset.projectGroup!==group});
+ }));
+}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',bindProjectFilters,{once:true}); else bindProjectFilters();
