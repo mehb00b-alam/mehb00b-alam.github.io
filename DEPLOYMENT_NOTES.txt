@@ -1,0 +1,9 @@
+Mehboob Alam · Approved Website Update · October 2026
+
+This package updates Home, About, Projects, Research, and Experience and adds detail pages. Other pages remain intact. Upload contents into the root of your GitHub Pages repository, keeping directory structure; do not upload the zip itself.
+
+Includes all 9 projects from updated CV (4 completed research, 4 completed ML coursework, 1 ongoing Perceptron assignment).
+
+Figures are illustrative, not claimed to be original experimental results.
+
+Only changed/new files are packaged; site photos and PDFs already on GitHub are preserved.
